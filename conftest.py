@@ -28,6 +28,7 @@ def browser(request):
             )
         print("\nstart chrome browser for test..")
         browser = webdriver.Chrome(options=options)
+        browser.maximize_window()
     elif browser_name == "firefox":
         firefox_profile = webdriver.FirefoxProfile()
         firefox_profile.set_preference("intl.accept_languages", user_language)
