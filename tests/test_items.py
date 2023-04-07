@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-def test_check_trash(browser):
+def test_check_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     browser.get(link)
     browser.implicitly_wait(5)

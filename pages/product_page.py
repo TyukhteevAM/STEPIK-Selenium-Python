@@ -11,11 +11,11 @@ from selenium.common.exceptions import NoAlertPresentException
 class ProductPage(BasePage):
     def test_guest_can_add_product_to_basket(self):
         # self.should_be_product_url()
-        # self.get_product_name()
-        # self.get_product_price()
+        self.get_product_name()
+        self.get_product_price()
         self.add_to_basket()
         self.solve_quiz_and_get_code()
-        # self.check_basket()
+        self.check_basket()
 
     # def should_be_product_url(self):
     #     get_url = self.browser.current_url
