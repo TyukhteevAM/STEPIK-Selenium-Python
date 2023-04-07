@@ -17,9 +17,9 @@ class ProductPage(BasePage):
         self.solve_quiz_and_get_code()
         self.check_basket()
 
-    # def should_be_product_url(self):
-    #     get_url = self.browser.current_url
-    #     assert "?promo=newYear" in get_url, "'?promo=newYear' is not in the URL"
+    def should_be_product_url(self):
+        get_url = self.browser.current_url
+        assert "?promo=newYear" in get_url, "'?promo=newYear' is not in the URL"
 
     def get_product_name(self):
         product_name = WebDriverWait(self.browser, 10).until(
@@ -45,9 +45,8 @@ class ProductPage(BasePage):
         try:
             alert = self.browser.switch_to.alert
             alert_text = alert.text
-            # print(f"Your code: {alert_text}")
+            print(f"Your code: {alert_text}")
             alert.accept()
-            # time.sleep(10000)
         except NoAlertPresentException:
             print("No second alert presented")
 

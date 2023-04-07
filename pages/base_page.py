@@ -4,8 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pages.locators import BasePageLocators
 
 
-class BasePage():
-
+class BasePage:
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
